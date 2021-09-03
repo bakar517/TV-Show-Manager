@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TV Show Manager</string>
+
+    <string name="add_new_tv_show">Add New TV Show </string>
+    <string name="show_all">Show All</string>
+
+    <string name="something_went_wrong_message">Something went wrong, try again</string>
+
+    <string name="tv_show">TV Show</string>
+    <string name="release_date">Release Date</string>
+    <string name="seasons">Seasons</string>
+    <string name="save_tv_show">Save TV Show</string>
+
+    <string name="release_date_colon">Release Date: </string>
+    <string name="seasons_colon">Seasons: </string>
+
+    <string name="save_successfully">Save Successfully</string>
+
+    <string name="done">Done</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="please_enter_title_of_show">Please Enter title of the Show</string>
+
+</resources>

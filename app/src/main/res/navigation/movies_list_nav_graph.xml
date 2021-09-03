@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movies_list_nav_graph"
+    app:startDestination="@id/screen_home">
+
+
+    <fragment
+        android:id="@+id/screen_home"
+        android:name="com.abubakar.tvshowmanager.home.HomeFragment"
+        android:label="homeFragment">
+
+
+        <action
+            android:id="@+id/action_go_to_new_insertion"
+            app:destination="@id/screen_new_insertion"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_go_to_movies_list"
+            app:destination="@id/screen_movies_list"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_new_insertion"
+        android:name="com.abubakar.tvshowmanager.add.AddNewShowFragment"
+        android:label="AddNewMovieFragment">
+
+        <action
+            android:id="@+id/action_go_to_date_time_picker"
+            app:destination="@id/screen_date_time_picker" />
+
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/screen_date_time_picker"
+        android:name="com.abubakar.tvshowmanager.add.DateAndTimePickerFragment"
+        android:label="DateAndTimePickerFragment">
+
+        <action
+            android:id="@+id/action_go_to_new_insertion"
+            app:destination="@id/screen_new_insertion" />
+
+    </dialog>
+
+
+    <fragment
+        android:id="@+id/screen_movies_list"
+        android:name="com.abubakar.tvshowmanager.shows.ShowsFragment"
+        android:label="MoviesFragment">
+
+    </fragment>
+
+</navigation>

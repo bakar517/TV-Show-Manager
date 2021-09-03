@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Black Mirror" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/releaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/release_date_colon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblReleaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/release_date_colon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/gray"
+                app:layout_constraintStart_toEndOf="@+id/releaseDate"
+                app:layout_constraintTop_toTopOf="@+id/releaseDate"
+                tools:text="18 March, 2019" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/releaseDateViewsBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="lblReleaseDate, releaseDate" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/seasons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/seasons_colon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/releaseDateViewsBarrier" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lblSeasons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/release_date_colon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/gray"
+                app:layout_constraintStart_toEndOf="@+id/seasons"
+                app:layout_constraintTop_toTopOf="@+id/seasons"
+                tools:text="10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
